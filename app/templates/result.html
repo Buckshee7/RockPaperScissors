@@ -2,8 +2,11 @@
 
 {% block content %}
     {% if winner: %}
-        <p>{{winner.name}} wins by choosing {{winner.choice.lower()}}</p>
+        <p>{{player_1.name}} chose {{player_1.choice.lower()}}</p>
+        <p>{{player_2.name}} chose {{player_2.choice.lower()}}</p>
+        <p>{{winner.name}} won!</p>
     {% else: %}
+        <p>Both players chose {{player_1.choice.lower()}}.</p>
         <p>The game was a draw!</p>
     {% endif %}
 {% endblock %}
