@@ -1,4 +1,5 @@
 from app.modules.player import Player
+import random
 
 def play_game(player_1, player_2):
     if player_1.choice == player_2.choice:
@@ -11,3 +12,8 @@ def play_game(player_1, player_2):
             return player_2
     else:
         return player_1
+
+def computer():
+    choices = ["Rock", "Paper", "Scissors"]
+    choice = choices[random.randint(0,2)]
+    return Player("Computer", choice)
