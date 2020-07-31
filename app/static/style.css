@@ -1,0 +1,35 @@
+header {
+    background-color: dodgerblue;
+    margin: 0;
+}
+
+header > h1 {
+    font-family = 'Rowdies', cursive;
+    margin: 0;
+    padding: 16px 16px;
+    font-size: 48px;
+}
+
+header > p {
+    font-family = 'Rowdies', cursive;
+    margin: 0;
+    padding: 16px 16px;
+    font-size: 24px;
+}
+
+body {
+    background-color: gainsboro;
+    margin: 0;
+}
+
+main {
+    margin: 24px;
+}
+
+h2 {
+    font-size: 34px;
+}
+
+p {
+    font-size: 20px;
+}
