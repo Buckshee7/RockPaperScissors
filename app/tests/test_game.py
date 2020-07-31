@@ -9,7 +9,7 @@ class TestGame(unittest.TestCase):
         self.player_3 = Player("Jarrod", "Scissors")
 
     def test_same_choice(self):
-        self.assertEqual("Draw", play_game(self.player_1, self.player_1))
+        self.assertEqual(None, play_game(self.player_1, self.player_1))
 
     def test_rock_paper(self):
         self.assertEqual(self.player_2, play_game(self.player_1, self.player_2))
