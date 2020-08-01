@@ -6,22 +6,22 @@ from app.modules.player import Player
 
 @app.route('/')
 def index(player_name = ""):
-    return render_template('index.html', player_name = player_name, title = "Play New Game!")
+    return render_template('index.html', player_name = player_name, title = "Rules!")
 
 @app.route('/<choice_1>/<choice_2>')
 def play_new_game(choice_1, choice_2):
     player_1 = Player("Player 1", choice_1.capitalize())
     player_2 = Player("Player 2", choice_2.capitalize())
     winner = play_game(player_1, player_2)
-    return render_template('result.html', player_1 = player_1, player_2 = player_2, winner = winner)
+    return render_template('result.html', title = "Results!", player_1 = player_1, player_2 = player_2, winner = winner)
 
 @app.route('/play')
 def get_choice():
-    return render_template('vscomp.html')
+    return render_template('vscomp.html', title = "New Game!")
 
 @app.route('/play/<name>')
 def get_choice_with_name(name):
-    return render_template('vscomp.html', name = name)
+    return render_template('vscomp.html', title = "New Game!", name = name)
 
 @app.route('/vscomp', methods=['POST'])
 def play_against_computer():
@@ -30,7 +30,7 @@ def play_against_computer():
     human = Player(name, choice)
     computer = generate_computer_player()
     winner = play_game(human, computer)
-    return render_template('result.html', player_1 = human, player_2 = computer, winner = winner)
+    return render_template('result.html', title = "Results!", player_1 = human, player_2 = computer, winner = winner)
     
     
     

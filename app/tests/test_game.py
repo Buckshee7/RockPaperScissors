@@ -16,3 +16,13 @@ class TestGame(unittest.TestCase):
 
     def test_rock_scissors(self):
         self.assertEqual(self.player_1, play_game(self.player_1, self.player_3))
+    
+    def test_lava_scissors(self):
+        player_4 = Player("Cheater", "Lava")
+        self.assertEqual(player_4, play_game(player_4, self.player_3))
+
+    def test_rock_lava(self):
+        player_4 = Player("Cheater", "Lava")
+        self.assertEqual(player_4, play_game(self.player_1, player_4))
+
+    
