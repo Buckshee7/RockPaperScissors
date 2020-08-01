@@ -10,10 +10,15 @@ def play_game(player_1, player_2):
             return player_2
     elif player_1.choice == "Scissors" and player_2.choice == "Rock":
             return player_2
+    elif player_2.choice == "Lava":
+        return player_2
     else:
         return player_1
 
 def generate_computer_player():
     choices = ["Rock", "Paper", "Scissors"]
-    choice = choices[random.randint(0,len(choices)-1)]
+    if random.randint(1, 10) == 10:
+        choice = "Lava"
+    else:
+        choice = choices[random.randint(0,len(choices)-1)]
     return Player("Computer", choice)

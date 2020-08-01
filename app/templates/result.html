@@ -3,6 +3,9 @@
 {% block content %}
     {% if winner: %}
         <p>{{player_1.name}} chose {{player_1.choice.lower()}}</p>
+        {% if player_2.choice == "Lava" %}
+            <p>{{player_2.name}} CHEATED!!</p>
+        {% endif %}
         <p>{{player_2.name}} chose {{player_2.choice.lower()}}</p>
         <p>{{winner.name}} won!</p>
     {% else: %}
