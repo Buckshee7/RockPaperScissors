@@ -3,6 +3,7 @@ from flask import render_template, request, redirect
 from app.modules.game import play_game, generate_computer_player
 from app.modules.player import Player
 
+
 @app.route('/')
 def index(player_name = ""):
     return render_template('index.html', player_name = player_name, title = "Play New Game!")
@@ -17,6 +18,10 @@ def play_new_game(choice_1, choice_2):
 @app.route('/play')
 def get_choice():
     return render_template('vscomp.html')
+
+@app.route('/play/<name>')
+def get_choice_with_name(name):
+    return render_template('vscomp.html', name = name)
 
 @app.route('/vscomp', methods=['POST'])
 def play_against_computer():

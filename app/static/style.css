@@ -79,3 +79,8 @@ input[type = "submit"]:hover {
 #scissors {
     background-image: url(scissors.jpg);
 }
+
+#results {
+    font-size: 1.5em;
+    margin-bottom: 60px;
+}
