@@ -1,14 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <section>
+    <section  id="player_input">
         <h2>Play vs Computer</h2>
         <form action="/vscomp" method='post'>
-            <label for="name">Player Name</label>
+            <label for="name">Player Name: </label>
             <input type="text" name="name">
-            <input type="submit" name="choice" value="Rock">
-            <input type="submit" name="choice" value="Paper">
-            <input type="submit" name="choice" value="Scissors">
+            <p>Select your move:</p>
+            <div>
+                <input type="submit" name="choice" value="Rock" id="rock">
+                <input type="submit" name="choice" value="Paper" id="paper">
+                <input type="submit" name="choice" value="Scissors" id="scissors">
+            </div>
         </form>
     </section>
 {% endblock %}
