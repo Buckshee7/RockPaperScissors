@@ -13,7 +13,7 @@ def play_game(player_1, player_2):
     else:
         return player_1
 
-def computer():
+def generate_computer_player():
     choices = ["Rock", "Paper", "Scissors"]
-    choice = choices[random.randint(0,2)]
+    choice = choices[random.randint(0,len(choices)-1)]
     return Player("Computer", choice)
